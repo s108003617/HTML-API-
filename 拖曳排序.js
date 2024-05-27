@@ -8,6 +8,7 @@
         item.classList.add('dragging');
       });
 
+      
       item.addEventListener('dragend', (event) =>  {
         item.classList.remove('dragging');
       });
