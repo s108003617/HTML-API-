@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>影片播放清單</title>
+  <style>
+    ul li {
+      list-style: none;
+      padding: 8px 16px;
+      margin: 4px;
+      background-color: #f0f0f0;
+      border: 1px solid #ddd;
+      cursor: move;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    ul li.dragging {
+      opacity: 0.5;
+    }
+
+    ul li .remove-btn {
+      margin-left: 10px;
+      cursor: pointer;
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <video id="player" width="300px" controls></video>
+    <div class="btns">
+      <button id="control">播放</button>
+      <button id="control2">暫停</button>
+      <input type="range" id="volumeControl" min="0" max="100" step="1">
+      <button id="prev">上一部</button>
+      <button id="next">下一部</button>
+      
+      <input type="file" id="fileInput" style="display:none">
+    </div>
+  </div>
+
+  <ul id="sortableList">
+    
+  </ul>
+  <button id="add">+</button>
+
+  <script src="/按鈕控制.js"></script>
+  <script src="/拖曳排序.js"></script>
+</body>
+</html>
