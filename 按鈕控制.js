@@ -12,7 +12,7 @@
    vr: document.querySelector("#videorange"),
  };
 
- 
+ //test1
 
  const player = document.querySelector("#player");
  let currentIndex = 0; // 目前播放的視頻索引
